@@ -88,7 +88,7 @@ public class App {
             // Turno do jogador2
             System.out.println(jogador2.getNome() + ", adivinhe um número entre 1 e 3:");
             escolhaJogador = scanner.nextInt();
-            numeroSorteado = random.nextInt(5) + 1;
+            numeroSorteado = random.nextInt(3) + 1;
 
             if (escolhaJogador == numeroSorteado) {
                 jogador2.atacar(jogador1);

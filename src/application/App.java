@@ -65,7 +65,7 @@ public class App {
 
         while (jogador1.getPontosDeVida() > 0 && jogador2.getPontosDeVida() > 0) {
             // Turno do Jogador
-            System.out.println(jogador1.getNome() + ", adivinhe um número entre 1 e 5:");
+            System.out.println(jogador1.getNome() + ", adivinhe um número entre 1 e 3:");
             int escolhaJogador = scanner.nextInt();
             int numeroSorteado = random.nextInt(3) + 1;
             limpaTela();

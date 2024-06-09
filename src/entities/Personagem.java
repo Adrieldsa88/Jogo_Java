@@ -29,9 +29,14 @@ public abstract class Personagem {
 
     public void exibirBarraDeVida() {
         int totalCaracteres = 20;
-        int caracteresPreenchidos = (int) ((double) pontosDeVida / pontosDeVidaMax * totalCaracteres);
-        String barraDeVida = new String(new char[caracteresPreenchidos]).replace("\0", "=") +
-                             new String(new char[totalCaracteres - caracteresPreenchidos]).replace("\0", " ");
-        System.out.println(getNome() + ": [" + barraDeVida + "] " + pontosDeVida + "/" + pontosDeVidaMax);
+        if(pontosDeVida < 0){
+            System.out.println(getNome()+"[] 0/"+pontosDeVidaMax);
+        }
+        else{
+            int caracteresPreenchidos = (int) ((double) pontosDeVida / pontosDeVidaMax * totalCaracteres);
+            String barraDeVida = new String(new char[caracteresPreenchidos]).replace("\0", "=") +
+                                 new String(new char[totalCaracteres - caracteresPreenchidos]).replace("\0", " ");
+            System.out.println(getNome() + ": [" + barraDeVida + "] " + pontosDeVida + "/" + pontosDeVidaMax);
+        }
     }
 }

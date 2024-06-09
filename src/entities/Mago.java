@@ -13,7 +13,12 @@ public class Mago extends Personagem implements Ataque {
     public void atacar(Personagem alvo) {
         System.out.println(getNome() + " lança uma bola de fogo em " + alvo.getNome() + "!");
         alvo.setPontosDeVida(alvo.getPontosDeVida() - dano);
-        System.out.println(alvo.getNome() + " agora tem " + alvo.getPontosDeVida() + " pontos de vida.");
+        if(alvo.getPontosDeVida() < 0){
+            System.out.println("A vida de " + alvo.getNome()+ " está zerada");
+        }
+        else{
+            System.out.println(alvo.getNome() + " agora tem " + alvo.getPontosDeVida() + " pontos de vida.");
+        }
     }
 
     @Override

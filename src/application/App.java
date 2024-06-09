@@ -82,7 +82,6 @@ public class App {
 
             if (jogador2.getPontosDeVida() <= 0) {
                 System.out.println(jogador2.getNome() + " foi derrotado! " + jogador1.getNome() + " venceu!");
-                break;
             }
 
             // Turno do jogador2

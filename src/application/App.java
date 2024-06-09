@@ -56,6 +56,7 @@ public class App {
                 jogador2 = new Guerreiro(nome2, 100, 20);
                 break;
         }
+        limpaTela();
 
         jogador1.exibirInfo();
         jogador2.exibirInfo();
